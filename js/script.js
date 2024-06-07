@@ -74,3 +74,27 @@ function deleteTask(index) {
     loadTasks();
 }
 
+// Buscar tareas por título
+function searchTasks() {
+    const searchValue = document.getElementById('searchInput').value.toLowerCase();
+    let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    const tasksTable = document.querySelector('#tasksTable tbody');
+    tasksTable.innerHTML = '';
+
+    tasks.filter(task => task.title.toLowerCase().includes(searchValue))
+         .forEach((task, index) => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${task.title}</td>
+            <td>${task.description}</td>
+            <td>${task.dueDate}</td>
+            <td>${task.priority}</td>
+            <td class="${task.status === 'Completada' ? 'completed' : ''}">${task.status}</td>
+            <td>
+                <button onclick="toggleStatus(${index})">${task.status === 'Pendiente' ? 'Marcar como Completada' : 'Marcar como Pendiente'}</button>
+                <button onclick="deleteTask(${index})">Eliminar</button>
+            </td>
+        `;
+        tasksTable.appendChild(row);
+    });
+}
