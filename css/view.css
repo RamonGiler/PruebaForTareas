@@ -1,7 +1,7 @@
 /* styles.css */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color:antiquewhite;
     margin: 0;
     padding: 20px;
 }
@@ -9,7 +9,7 @@ body {
 .container {
     max-width: 800px;
     margin: auto;
-    background: white;
+    background: transparent;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
@@ -29,11 +29,12 @@ form input, form textarea, form select {
     flex: 1 1 100%;
     padding: 10px;
     margin: 5px 0;
+    background-color: transparent;
 }
 
 form button {
     padding: 10px 20px;
-    background-color: #28a745;
+    background-color: #63b2f3;
     color: white;
     border: none;
     cursor: pointer;
@@ -46,6 +47,7 @@ form button:hover {
 #tasksTable {
     width: 100%;
     border-collapse: collapse;
+    background-color: aqua;
 }
 
 #tasksTable th, #tasksTable td {
@@ -54,7 +56,7 @@ form button:hover {
 }
 
 #tasksTable th {
-    background-color: #f2f2f2;
+    background-color: #84c4f1;
     text-align: left;
 }
 
@@ -67,4 +69,5 @@ form button:hover {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
+    background-color: transparent;
 }
