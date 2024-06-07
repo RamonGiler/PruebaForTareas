@@ -58,3 +58,11 @@ function loadTasks() {
     });
 }
 
+// Marcar tarea como completada o pendiente
+function toggleStatus(index) {
+    let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    tasks[index].status = tasks[index].status === 'Pendiente' ? 'Completada' : 'Pendiente';
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+    loadTasks();
+}
+
