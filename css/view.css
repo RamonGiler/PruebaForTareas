@@ -1,0 +1,71 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+form input, form textarea, form select {
+    flex: 1 1 100%;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+#tasksTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#tasksTable th, #tasksTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#tasksTable th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
