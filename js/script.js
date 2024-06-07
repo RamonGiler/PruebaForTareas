@@ -66,3 +66,11 @@ function toggleStatus(index) {
     loadTasks();
 }
 
+// Eliminar tarea de la lista
+function deleteTask(index) {
+    let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    tasks.splice(index, 1);
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+    loadTasks();
+}
+
